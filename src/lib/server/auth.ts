@@ -21,4 +21,5 @@ export const auth = betterAuth({
 		provider: "sqlite", // or "mysql", "sqlite"
 	}),
 	socialProviders: configuredProviders,
+    trustedOrigins: env.ALLOWED_ORIGINS.split(",") || [],
 });
